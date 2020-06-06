@@ -1,0 +1,13 @@
+.card {
+  max-width: 300px;
+  margin: 10px;
+}
+
+.header-image {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSVdleqGq68ETAFUlY-L4CBTOa1oD96IIYse20Wrxs2nGOOMTiZ&usqp=CAU');
+  background-size: cover;
+}
+
+.workouts {
+  display: flex;
+}

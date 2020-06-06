@@ -1,0 +1,40 @@
+    <div class="workouts">
+      <div class="workouts__title">
+        <h1>
+          Vasi treninzi
+        </h1>
+        <!-- <a class="btn__add" [routerLink]="['../training/new']">
+          Dodaj Trening
+        </a> -->
+        <button [routerLink]="['../training/new']" mat-flat-button color="accent">Dodaj Trening</button>
+
+      </div>
+      <div class="workouts">
+        <div class=" message" *ngIf="!workouts?.length">
+          0 treninga, dodajte novi trening
+        </div>
+        <mat-card *ngFor="let workout of workouts" class="card">
+          <mat-card-header>
+            <div mat-card-avatar class="header-image"></div>
+            <mat-card-title>{{workout.name}}</mat-card-title>
+            <mat-card-subtitle>{{workout.calories}}cal</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <p>
+              Opis treninga: {{workout.desc }}
+            </p>
+            <mat-list role="list">
+              Vezbe:
+              <mat-list-item *ngFor="let exercise of workout.exercises" role="listitem">{{exercise.name | uppercase}} :
+                {{exercise.time}}sec
+              </mat-list-item>
+            </mat-list>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>Izmeni</button>
+            <button mat-button>Treniraj</button>
+          </mat-card-actions>
+        </mat-card>
+        <br>
+      </div>
+    </div>

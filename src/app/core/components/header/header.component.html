@@ -1,0 +1,25 @@
+<nav>
+  <mat-toolbar color="primary">
+    <span (click)="navTo('/home')">FitnessApp</span>
+    <span class="fill-remaining-space"></span>
+    <span>
+      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Icon-button with a menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="navTo('/home')">
+          <mat-icon>home</mat-icon>
+          <span>Home</span>
+        </button>
+        <button mat-menu-item (click)="navTo('/users')">
+          <mat-icon>account_circle</mat-icon>
+          <span>Users</span>
+        </button>
+        <button mat-menu-item (click)="navTo('/training')">
+          <mat-icon>account_circle</mat-icon>
+          <span>Training</span>
+        </button>
+      </mat-menu>
+    </span>
+  </mat-toolbar>
+</nav>

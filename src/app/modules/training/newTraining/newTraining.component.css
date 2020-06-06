@@ -1,0 +1,11 @@
+.workout-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.workout-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 1300px;
+}
