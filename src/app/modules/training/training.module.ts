@@ -1,3 +1,4 @@
+import { TrainingStartedComponent } from './trainingStarted/trainingStarted.component';
 import { SharedModule } from './../../shared/shared.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -8,7 +9,11 @@ import { TrainingService } from './services/training.service';
 
 @NgModule({
   imports: [CommonModule, TrainingRoutingModule, SharedModule],
-  declarations: [TrainingComponent, NewTrainingComponent],
+  declarations: [
+    TrainingComponent,
+    NewTrainingComponent,
+    TrainingStartedComponent,
+  ],
   providers: [TrainingService],
 })
 export class TrainingModule {}

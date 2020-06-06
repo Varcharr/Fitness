@@ -5,7 +5,68 @@ import { Injectable } from '@angular/core';
 })
 export class TrainingService {
   constructor() {}
-
+  data = [
+    {
+      id: 1,
+      name: 'Treninng za noge',
+      exercises: [
+        {
+          name: 'Cucanj',
+          img:
+            'https://image.shutterstock.com/image-vector/exercise-guide-by-woman-doing-260nw-1303854643.jpg',
+          time: 60,
+        },
+        {
+          name: 'Trcanje',
+          img:
+            'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/166-mtrappe-dsc2528-1580750632.jpg',
+          time: 60,
+        },
+      ],
+      calories: 500,
+      desc: 'Lorem Ipsum',
+    },
+    {
+      id: 2,
+      name: 'Kondicija',
+      exercises: [
+        {
+          name: 'Plivanje',
+          img:
+            'https://image.shutterstock.com/image-vector/exercise-guide-by-woman-doing-260nw-1303854643.jpg',
+          time: 60,
+        },
+        {
+          name: 'Trcanje',
+          img:
+            'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/166-mtrappe-dsc2528-1580750632.jpg',
+          time: 60,
+        },
+      ],
+      calories: 410,
+      desc: 'Trening kondicije',
+    },
+    {
+      id: 3,
+      name: 'Ruke',
+      exercises: [
+        {
+          name: 'Sklekovi',
+          img:
+            'https://image.shutterstock.com/image-vector/exercise-guide-by-woman-doing-260nw-1303854643.jpg',
+          time: 60,
+        },
+        {
+          name: 'Tegovi',
+          img:
+            'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/166-mtrappe-dsc2528-1580750632.jpg',
+          time: 60,
+        },
+      ],
+      calories: 210,
+      desc: 'Trening za ruke',
+    },
+  ];
   exercises: [
     {
       name: 'cucanj';
@@ -20,68 +81,13 @@ export class TrainingService {
   ];
 
   fetchTrainings() {
-    return [
-      {
-        id: 1,
-        name: 'Treninng za noge',
-        exercises: [
-          {
-            name: 'Cucanj',
-            img:
-              'https://image.shutterstock.com/image-vector/exercise-guide-by-woman-doing-260nw-1303854643.jpg',
-            time: 60,
-          },
-          {
-            name: 'Trcanje',
-            img:
-              'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/166-mtrappe-dsc2528-1580750632.jpg',
-            time: 60,
-          },
-        ],
-        calories: 500,
-        desc: 'Lorem Ipsum',
-      },
-      {
-        id: 2,
-        name: 'Kondicija',
-        exercises: [
-          {
-            name: 'Plivanje',
-            img:
-              'https://image.shutterstock.com/image-vector/exercise-guide-by-woman-doing-260nw-1303854643.jpg',
-            time: 60,
-          },
-          {
-            name: 'Trcanje',
-            img:
-              'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/166-mtrappe-dsc2528-1580750632.jpg',
-            time: 60,
-          },
-        ],
-        calories: 410,
-        desc: 'Trening kondicije',
-      },
-      {
-        id: 2,
-        name: 'Ruke',
-        exercises: [
-          {
-            name: 'Sklekovi',
-            img:
-              'https://image.shutterstock.com/image-vector/exercise-guide-by-woman-doing-260nw-1303854643.jpg',
-            time: 60,
-          },
-          {
-            name: 'Tegovi',
-            img:
-              'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/166-mtrappe-dsc2528-1580750632.jpg',
-            time: 60,
-          },
-        ],
-        calories: 210,
-        desc: 'Trening za ruke',
-      },
-    ];
+    return this.data;
+  }
+  fetchTraining(id) {
+    return this.data[0];
+    return this.data.filter((t) => {
+      t.id === id;
+    });
   }
   fetchExercises() {
     return [1, 2, 3];

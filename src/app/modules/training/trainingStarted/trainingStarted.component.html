@@ -1,0 +1,23 @@
+<div class="wrapper">
+
+
+
+
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Noge</mat-card-title>
+      <mat-card-subtitle>Vezba 3</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{training.exercises[0].img}}" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+
+      <h1>{{timeLeft}} SEKUNDI</h1>
+
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-flat-button color="accent" (click)="start()" [disabled]="isRunning">Pocni Trening</button>
+      <button mat-flat-button color="accent" (click)="pause()" [disabled]="!isRunning">Pauziraj Trening</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

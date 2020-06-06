@@ -13,7 +13,7 @@ export class NewTrainingComponent implements OnInit {
     name: [null, [Validators.required]],
     calories: [null],
     time: [null, [Validators.required]],
-    username: [null, [Validators.required]],
+    desc: [null, [Validators.required]],
     password: [null, [Validators.required, Validators.minLength(6)]],
     exercises: [null, [Validators.required]],
   });

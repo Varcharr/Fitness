@@ -2,6 +2,7 @@ import { NewTrainingComponent } from './newTraining/newTraining.component';
 import { TrainingComponent } from './training/training.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { TrainingStartedComponent } from './trainingStarted/trainingStarted.component';
 
 const routes: Routes = [
   {
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path: 'new',
     component: NewTrainingComponent,
+  },
+  {
+    path: ':id',
+    component: TrainingStartedComponent,
   },
 ];
 

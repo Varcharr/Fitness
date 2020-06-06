@@ -1,0 +1,9 @@
+.wrapper {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.example-card {
+  align-self: center;
+  max-width: 1000px;
+}

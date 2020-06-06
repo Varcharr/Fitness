@@ -1,6 +1,6 @@
 <div class="workout-wrapper">
   <form [formGroup]="workoutForm" class="workout-form" (ngSubmit)="createWorkout()">
-    <h2>
+    <!-- <h2>
       Kreirajte novi trening
     </h2>
 
@@ -8,6 +8,12 @@
       <mat-label>Naziv treninga</mat-label>
       <input matInput formControlName="name">
       <mat-error>Naziv treninga je obavezan</mat-error>
+
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Opis</mat-label>
+      <input matInput formControlName="name">
+      <mat-error>Opis treninga je obavezan</mat-error>
 
     </mat-form-field>
 
@@ -32,7 +38,29 @@
         <mat-option value="fr">Plivanje</mat-option>
       </mat-select>
       <mat-error>Obavezno je odabrati bar jednu vežbu</mat-error>
+    </mat-form-field> -->
+
+    <h2>
+      Kreirajte novi profil
+    </h2>
+    <mat-form-field appearance="outline">
+      <mat-label>Korisnicko ime</mat-label>
+      <input matInput formControlName="name">
+      <mat-error>Naziv treninga je obavezan</mat-error>
     </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Lozinka</mat-label>
+      <input matInput formControlName="name">
+      <mat-error>Lozinka</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Godine</mat-label>
+      <input matInput formControlName="name">
+      <mat-error>Lozinka</mat-error>
+    </mat-form-field>
+    <button mat-flat-button color="accent">Kreiraj novi profil</button>
 
   </form>
 </div>

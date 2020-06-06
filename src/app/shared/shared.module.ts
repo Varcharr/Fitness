@@ -15,6 +15,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatListModule } from '@angular/material/list';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -40,6 +41,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatCheckboxModule,
     MatSnackBarModule,
     MatListModule,
+    MatProgressSpinnerModule,
 
     //Directives
     EssentialDirective,

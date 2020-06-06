@@ -32,7 +32,7 @@
           </mat-card-content>
           <mat-card-actions>
             <button mat-button>Izmeni</button>
-            <button mat-button>Treniraj</button>
+            <button [routerLink]="['../training/',workout.id]" mat-button>Treniraj</button>
           </mat-card-actions>
         </mat-card>
         <br>
